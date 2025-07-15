@@ -32,7 +32,7 @@ class OpenAIAPI {
                 return responseData.choices[0].message.content;
             } else {
                 console.error('⚠️ OpenAI API returned an unexpected format:', JSON.stringify(responseData, null, 2));
-                return `❌ Error: ${responseData.error.code}. Please try again later.`;
+                return `❌ Error: ${responseData.error.message}. Please try again later.`;
             }
 
         } catch (error) {
